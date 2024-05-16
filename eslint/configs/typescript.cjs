@@ -1,20 +1,20 @@
-const globals = require("globals");
-const tsEslint = require("typescript-eslint");
+const globals = require('globals')
+const tsEslint = require('typescript-eslint')
 
 /** @type {import('eslint').Linter.FlatConfig} */
 module.exports = tsEslint.config(
   ...tsEslint.configs.recommended, //
   {
-    name: "typescript",
+    name: 'typescript',
     plugins: {
-      "@typescript-eslint": tsEslint.plugin,
+      '@typescript-eslint': tsEslint.plugin,
     },
     languageOptions: {
       parser: tsEslint.parser,
       parserOptions: {
-        sourceType: "module",
+        sourceType: 'module',
         ecmaVersion: 2020,
-        extraFileExtensions: [".svelte"],
+        extraFileExtensions: ['.svelte'],
       },
       globals: {
         ...globals.browser,
@@ -22,5 +22,5 @@ module.exports = tsEslint.config(
         ...globals.node,
       },
     },
-  },
-);
+  }
+)

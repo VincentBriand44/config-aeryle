@@ -1,18 +1,18 @@
-import { prettierConfig } from "./default.js";
+import { prettierConfig } from './default.js'
 
 /** @type {import("prettier").Config} */
 export const prettierConfigSvelte = {
-  plugins: ["prettier-plugin-svelte"],
+  plugins: ['prettier-plugin-svelte'],
   overrides: [
     ...(prettierConfig.overrides ?? []),
     {
-      files: ["**/*.svelte"],
+      files: ['**/*.svelte'],
       options: {
-        parser: "svelte",
+        parser: 'svelte',
       },
     },
   ],
   svelteAllowShorthand: true,
   svelteStrictMode: false,
-  svelteSortOrder: "scripts-options-markup-styles",
-};
+  svelteSortOrder: 'scripts-options-markup-styles',
+}

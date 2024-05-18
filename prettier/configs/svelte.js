@@ -1,4 +1,4 @@
-import { prettierConfig } from './default'
+import { prettierConfig } from './default.js'
 
 /** @type {import("prettier").Config} */
 export const prettierConfigSvelte = {

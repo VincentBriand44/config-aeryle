@@ -10,15 +10,13 @@ npm install --save-dev eslint typescript-eslint
 3. Use the barebones config (Typescript only)
 
 ```javascript
-const tsEslint = require("typescript-eslint");
-const {
-  eslintConfigTypescript,
-} = require("config-aeryle/eslint/configs/index.cjs");
+const tsEslint = require('typescript-eslint')
+const { eslintConfigTypescript } = require('config-aeryle/eslint/configs/index.cjs')
 
 module.exports = tsEslint.config(
-  ...eslintConfigTypescript,
+  ...eslintConfigTypescript
   // Additional configs
-);
+)
 ```
 
 # Optional configs
@@ -29,17 +27,17 @@ module.exports = tsEslint.config(
 const {
   eslintConfigTypescript,
   eslintConfigCommonJS,
-  eslintConfigEs,
+  eslintConfigEsm,
   eslintConfigImport,
-} = require("config-aeryle/eslint/configs/index.cjs");
+} = require('config-aeryle/eslint/configs/index.cjs')
 
 module.exports = tsEslint.config(
   ...eslintConfigTypescript,
   ...eslintConfigCommonJS,
   ...eslintConfigEsm,
-  ...eslintConfigImport,
+  ...eslintConfigImport
   // Additional configs
-);
+)
 ```
 
 # How to use Prettier's configs
@@ -54,11 +52,11 @@ npm install --save-dev prettier
 3. Use the barebones config
 
 ```javascript
-import { prettierConfig } from "./prettier/configs/default.js";
+import { prettierConfig } from './prettier/configs/default.js'
 
 export default {
   ...prettierConfig,
-};
+}
 ```
 
 # Optional configs
@@ -66,11 +64,11 @@ export default {
 ## prettier-plugin-svelte
 
 ```javascript
-import { prettierConfig } from "./prettier/configs/default.js";
-import { prettierConfigSvelte } from "./prettier/configs/svelte.js";
+import { prettierConfig } from './prettier/configs/default.js'
+import { prettierConfigSvelte } from './prettier/configs/svelte.js'
 
 export default {
   ...prettierConfig,
   ...prettierConfigSvelte,
-};
+}
 ```
